@@ -15,15 +15,17 @@
                 controller: 'verifyController',
                 templateUrl: 'app/views/verify.html'
             })
-
-        .when('/profile', {
-            controller: 'profileController',
-            templateUrl: 'app/views/profile.html'
-        })
-
-        .when('/messages', {
+            .when('/profile', {
+                controller: 'profileController',
+                templateUrl: 'app/views/profile.html'
+            })
+            .when('/messages', {
                 controller: 'messageController',
                 templateUrl: 'app/views/messages.html'
+            })
+            .when('/league', {
+                controller: 'leagueController',
+                templateUrl: 'app/views/league.html'
             })
             .otherwise({
                 redirectTo: '/'
