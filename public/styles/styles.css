@@ -24,3 +24,7 @@ th {
     background-color: #b0c4de;
 }
 
+.imageList{
+ align-items: left;   
+vertical-align: left;
+}
