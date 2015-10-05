@@ -1,10 +1,11 @@
 (function() {
     
     var verifyController = function ($scope, $http) {
- 
-        $http.post('http://comp490.duckdns.org/login', { username: $scope.username, password: $scope.password }).success(function(response) {
+ console.log($scope.username);
+        $http.post('http://comp490.duckdns.org/login', { name: $scope.username, password: $scope.password }).success(function(response) {
         $scope.response = response;
         console.log($scope.response);
+            
         })
        
         
