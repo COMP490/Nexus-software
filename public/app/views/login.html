@@ -1,20 +1,20 @@
-<form role="form" class="" action="/login" method="POST">
+<form role="form" ng-submit="login(credentials)" novalidate>
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
     <h2 CLASS="text-primary">Login</h2>
 
     <div class="form-group">
 
         <div class="col-xs-4">
-            <H3 class="text-primary"> Username:</H3><br>
+            <label for="username" class="text-primary"> Username:</label><br>
 
-            <input type="text" name="username" ng-model="username" class="form-control col-sm-2">
+            <input type="text" id="username" name="username" ng-model="credentials.username" class="form-control col-sm-2">
             <br>
 
-            <h3 class="text-primary"> Password:</H3><br>
+            <label for="password" class="text-primary"> Password:</label><br>
 
-            <input type="text" name="password" ng-model="password" class="form-control col-sm-2">
+            <input type="password" id="password" name="password" ng-model="credentials.password" class="form-control col-sm-2">
             <br>
-            <a href="#/verify" class="button">Submit</a>
+            <button  type = "submit" class="button">Submit</button>
 
             
         </div>
