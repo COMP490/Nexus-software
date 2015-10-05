@@ -1,4 +1,4 @@
-(function() {
+(function () {
     
     var verifyController = function ($scope, $http) {
  console.log($scope.username);
