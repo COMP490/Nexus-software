@@ -23,17 +23,14 @@ th {
 .container {
     background-color: #b0c4de;
 }
-
-<<<<<<< HEAD
 #password{
     color:green;
 }
 
-#headTab{
+#headTab {
     text-align: left;
-=======
+}
 .imageList{
  align-items: left;   
-vertical-align: left;
->>>>>>> master
+vertical-align: middle;
 }
