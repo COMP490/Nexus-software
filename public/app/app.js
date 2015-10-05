@@ -5,7 +5,10 @@
 
 
 
-    app.config(function ($routeProvider) {
+    app.config(function ($routeProvider, $httpProvider) {
+         $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+     $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
         $routeProvider
             .when('/', {
                 controller: 'loginController',
