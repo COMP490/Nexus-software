@@ -3,10 +3,10 @@
     var loginController = function ($scope, $http) {
         $scope.loginStatus = false;
         
-           $scope.logoff = function () {
+         $scope.logout = function (something) {
           $scope.loginStatus = false;
          console.log($scope.loginStatus);
-        }
+        };
            
         $scope.login = function (credentials) {
             console.log(credentials)
