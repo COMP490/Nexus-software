@@ -16,8 +16,8 @@
  
             $http.post('http://comp490.duckdns.org/login', userInfo).success(function (response) {
                 $scope.response = response;
-                console.log($scope.response);
-                if ($scope.response.result = "true") {
+                console.log($scope.response.result);
+                if ($scope.response.result == true) {
                     $scope.loginStatus = true;
                 } else {
                     $scope.loginStatus = false;
