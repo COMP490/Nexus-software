@@ -15,16 +15,13 @@
             $http.post('http://comp490.duckdns.org/login', userInfo).success(function (response) {
                 $scope.response = response;
                 console.log($scope.response);
-
             })
         }
-
     };
 
     loginController.$inject = ['$scope', '$http'];
 
     angular.module('nexusApp')
         .controller('loginController', loginController);
-
 
 }());

@@ -1,3 +1,10 @@
+body{
+    background-image:url(../images/bg-light.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
 table {
     width: 500px;   
 }
@@ -28,9 +35,26 @@ th {
 }
 
 #headTab {
-    text-align: left;
+    text-align: center;
+}
+
+#centerStuff{
+    position: relative;
+    top: 50%;
+    left: 34%;
+    alignment: center;
 }
 .imageList{
  align-items: left;   
 vertical-align: middle;
 }
+
+#centerContent{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -30%)
+}
+
