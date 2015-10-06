@@ -3,7 +3,11 @@
     var loginController = function ($scope, $http) {
         $scope.loginStatus = false;
         
-        
+           $scope.logoff = function () {
+          $scope.loginStatus = false;
+         console.log($scope.loginStatus);
+        }
+           
         $scope.login = function (credentials) {
             console.log(credentials)
             var userInfo = {
@@ -25,13 +29,10 @@
                 }
                 console.log($scope);
             })
-        }
+        };
         
         
-        $scope.logoff = function () {
-          $scope.loginStatus = false;
-            console.log($scope.loginStatus);
-        }
+     
  
     };
  
