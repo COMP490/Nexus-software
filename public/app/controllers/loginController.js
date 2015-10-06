@@ -29,7 +29,8 @@
         
         
         $scope.logoff = function () {
-            $scope.loginStatus = false;
+          $scope.loginStatus = false;
+            console.log($scope.loginStatus);
         }
  
     };
