@@ -1,10 +1,10 @@
 (function () {
- 
- 
+
+
     var app = angular.module('nexusApp', ['ngRoute']);
- 
- 
- 
+
+
+
     app.config(function ($routeProvider, $httpProvider) {
         $httpProvider.defaults.headers.common = {};
         $httpProvider.defaults.headers.post = {};
@@ -34,8 +34,8 @@
             .otherwise({
                 redirectTo: '/'
             });
- 
+
     });
- 
- 
+
+
 }());

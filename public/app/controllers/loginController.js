@@ -1,23 +1,23 @@
 (function () {
- 
+
     var loginController = function ($scope, $http) {
         $scope.loginStatus = false;
-        
-         $scope.logout = function (something) {
-          $scope.loginStatus = false;
-         console.log($scope.loginStatus);
+
+        $scope.logout = function (something) {
+            $scope.loginStatus = false;
+            console.log($scope.loginStatus);
         };
-           
+
         $scope.login = function (credentials) {
             console.log(credentials)
             var userInfo = {
- 
+
                 "username": credentials.username,
                 "password": credentials.password
- 
+
             };
             console.log(userInfo);
- 
+
             $http.post('http://comp490.duckdns.org/login', userInfo).success(function (response) {
                 $scope.response = response;
                 console.log($scope.response.result);
@@ -30,16 +30,16 @@
                 console.log($scope);
             })
         };
-        
-        
-     
- 
+
+
+
+
     };
- 
+
     loginController.$inject = ['$scope', '$http'];
- 
+
     angular.module('nexusApp')
         .controller('loginController', loginController);
- 
- 
+
+
 }());
