@@ -8,8 +8,7 @@ var champListUrl = "https://na.api.pvp.net/api/lol/na/v1.2/champion?api_key=d22b
         
    $http.get(champListUrl).success( function(response) {
       $scope.champions =  response.champions;
-       console.log($scope.champions);
-   $scope.freeChamps = []; 
+   $scope.freeChamps = [];
    $scope.imageObject = [];  
        $scope.champData =[];
        $scope.combinedObject = [];

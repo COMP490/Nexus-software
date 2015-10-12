@@ -20,11 +20,35 @@ th {
   border-left: 3px solid #CCCCCC;
 
 }
+
 .container {
     background-color: #b0c4de;
 }
 
+#password{
+    color:green;
+}
+
+#headTab {
+    text-align: center;
+}
+
+#centerStuff{
+    position: relative;
+    top: 50%;
+    left: 34%;
+    alignment: center;
+}
+
 .imageList{
  align-items: left;   
-vertical-align: left;
+vertical-align: middle;
+}
+
+#centerContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -30%)
 }

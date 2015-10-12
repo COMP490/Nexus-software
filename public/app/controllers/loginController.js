@@ -31,15 +31,11 @@
             })
         };
 
-
-
-
     };
 
     loginController.$inject = ['$scope', '$http'];
 
     angular.module('nexusApp')
         .controller('loginController', loginController);
-
 
 }());

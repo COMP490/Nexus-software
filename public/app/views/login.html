@@ -1,20 +1,17 @@
 <form role="form" ng-hide=loginStatus ng-submit="login(credentials)" novalidate>
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
-    <h2 CLASS="text-primary">Login</h2>
+    <h2 CLASS="text-primary" id ="headTab">Login</h2>
 
     <div class="form-group">
 
-        <div class="col-xs-4">
-            <label for="username" class="text-primary"> Username:</label>
-            <br>
+        <div class="col-xs-4" id="centerStuff">
+            <!--label for="username" class="text-primary"> Username:</label><br-->
 
-            <input type="text" id="username" name="username" ng-model="credentials.username" class="form-control col-sm-2">
+            <input type="text" id="username" name="username" ng-model="credentials.username" class="form-control col-sm-2" placeholder="UserName:">
             <br>
+            <!--label for="password" class="text-primary"> Password:</label><br-->
 
-            <label for="password" class="text-primary"> Password:</label>
-            <br>
-
-            <input type="password" id="password" name="password" ng-model="credentials.password" class="form-control col-sm-2">
+            <input type="password" id="password" name="password" ng-model="credentials.password" class="form-control col-sm-2" placeholder="Password:">
             <br>
             <button type="submit" class="button">Submit</button>
             <p class="text-danger">{{error}}</p>
