@@ -1,16 +1,14 @@
-<div class="container-fluid">
+<div class= "container-fluid">
     <h2>League of Legends</h2>
     <h3>Current Free Champs</h3>
 
-
-    <div class="row" ng-repeat="data in champData">
+    <div class="row"  ng-repeat = "data in champData"  >
 
         <div class="col-xs-6 col-md-4">
             <p> {{data.key}} </p>
         </div>
         <div class="col-xs-6 col-md-4">
-            <img src="http://ddragon.leagueoflegends.com/cdn/5.19.1/img/champion/{{data.image.full}}">
-        </div>
+        <img src = "http://ddragon.leagueoflegends.com/cdn/5.19.1/img/champion/{{data.image.full}}">
     </div>
-
+</div>
 </div>
