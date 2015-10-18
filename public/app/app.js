@@ -1,12 +1,11 @@
 (function () {
 
 
-    var app = angular.module('nexusApp', ['ngRoute', 'angularModalService']);
-
+    var app = angular.module('nexusApp', ['ngRoute', 'angularModalService', 'ui.bootstrap']);
 
 
     app.config(function ($routeProvider, $httpProvider) {
-  
+
         $routeProvider
             .when('/', {
                 controller: 'loginController',
@@ -36,4 +35,3 @@
 
 
 }());
-

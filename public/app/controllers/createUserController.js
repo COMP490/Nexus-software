@@ -1,17 +1,36 @@
 (function () {
 
-    var createUserController = function ($scope, close) {
+    var createUserController = function ($scope) {
+        this.showModal = false;
 
-        $scope.dismissModal = function (result) {
-            close(result, 200); // close, but give 200ms for bootstrap to animate
-        };
+                this.showView = false;
 
+                this.counter = 1;
 
-    };
+                this.toggleDialog = function () {
 
-    createUserController.$inject = ['$scope' , 'close'];
+                    this.showModal = !this.showModal;
+
+                }
+
+                this.toggleView = function () {
+
+                    this.showView = !this.showView;
+
+                }
+
+                this.changeDisplay = function () {
+
+                    this.counter++;
+
+                }
+
+            }
+
+    createUserController.$inject = ['$scope'];
 
     angular.module('nexusApp')
         .controller('createUserController', createUserController);
+
 
 }());
