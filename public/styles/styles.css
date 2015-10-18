@@ -48,7 +48,7 @@ vertical-align: middle;
 #league{
     height: auto;
     width: auto;
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 30px;
+    max-height: 30px;
     padding-bottom: 10px;
 }

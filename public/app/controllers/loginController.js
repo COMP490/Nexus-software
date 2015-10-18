@@ -1,7 +1,27 @@
 (function () {
 
-    var loginController = function ($scope, $http) {
-        $scope.loginStatus = false;
+        var loginController = function ($scope, $http, ModalService) {
+            $scope.loginStatus = false;
+
+            $scope.showAModal = function () {
+
+                // Just provide a template url, a controller and call 'showModal'.
+                ModalService.showModal({
+                    templateUrl: "app/views/createUser.html",
+                    controller: "createUserController"
+                }).then(function (modal) {
+                    // The modal object has the element built, if this is a bootstrap modal
+                    // you can call 'modal' to show it, if it's a custom modal just show or hide
+                    // it as you need to.
+                    modal.element.modal();
+                    modal.close.then(function (result) {
+                        $scope.message = result ? "You said Yes" : "You said No";
+                    });
+                });
+
+            };
+
+        
 
         $scope.logout = function (something) {
             $scope.loginStatus = false;
@@ -33,9 +53,9 @@
 
     };
 
-    loginController.$inject = ['$scope', '$http'];
+    loginController.$inject = ['$scope', '$http', 'ModalService'];
 
     angular.module('nexusApp')
-        .controller('loginController', loginController);
+    .controller('loginController', loginController);
 
 }());
