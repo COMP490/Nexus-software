@@ -1,13 +1,13 @@
 (function () {
 
-    var createUserController = function ($scope , $http) {
+    var createUserController = function ($scope , $http,  $modalInstance, $location) {
         this.showModal = false;
 
                 this.showView = false;
 
                 this.counter = 1;
 
-                this.toggleDialog = function () {
+                toggleDialog = function () {
 
                     this.showModal = !this.showModal;
 
@@ -40,17 +40,20 @@
                         console.log($scope.response.result);
                         if ($scope.response.result == true) {
                             $scope.loginStatus = true;
+                            $location.path("/");
                         } else {
                             $scope.loginStatus = false;
                             $scope.error = "The credientials entered were incorrect";
                         }
                         console.log($scope);
+                      
+                         $modalInstance.dismiss('cancel');
                     })
                 };
 
             }
 
-    createUserController.$inject = ['$scope', '$http'];
+    createUserController.$inject = ['$scope', '$http', '$modalInstance', '$location'];
 
     angular.module('nexusApp')
         .controller('createUserController', createUserController);
