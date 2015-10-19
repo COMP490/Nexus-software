@@ -38,7 +38,7 @@
                     $http.post('http://comp490.duckdns.org/create', userInfo).success(function (response) {
                         $scope.response = response;
                         console.log($scope.response.result);
-                        if ($scope.response.result == true) {
+                        if ($scope.response.result == true && credentials.password===credentials.password2) {
                             $scope.loginStatus = true;
                             $location.path("/");
                         } else {
@@ -47,7 +47,7 @@
                         }
                         console.log($scope);
                       
-                         $modalInstance.dismiss('cancel');
+                   
                     })
                 };
 
