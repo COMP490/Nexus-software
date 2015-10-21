@@ -1,5 +1,5 @@
 table {
-    width: 500px;   
+    width: 500px;
 }
 
 th {
@@ -9,15 +9,15 @@ th {
 }
 
 .button {
-  font: bold 20px Arial;
-  text-decoration: none;
-  background-color: #337ab7;
-  color: #FFFFFF;
-  padding: 2px 6px 2px 6px;
-  border-top: 3px solid #CCCCCC;
-  border-right: 3px solid #333333;
-  border-bottom: 3px solid #333333;
-  border-left: 3px solid #CCCCCC;
+    font: bold 20px Arial;
+    text-decoration: none;
+    background-color: #337ab7;
+    color: #FFFFFF;
+    padding: 2px 6px 2px 6px;
+    border-top: 3px solid #CCCCCC;
+    border-right: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    border-left: 3px solid #CCCCCC;
 
 }
 
@@ -25,30 +25,24 @@ th {
     background-color: #b0c4de;
 }
 
-#password{
-    color:green;
+#password {
+    color: green;
 }
 
 #headTab {
     text-align: center;
 }
 
-#centerStuff{
-    position: relative;
-    top: 50%;
-    left: 34%;
-    alignment: center;
+.imageList {
+    align-items: left;
+    vertical-align: middle;
 }
 
-.imageList{
- align-items: left;   
-vertical-align: middle;
-}
-
-#league{
+#league {
     height: auto;
     width: auto;
     max-width: 75px;
     max-height: 75px;
     padding-bottom: 10px;
 }
+
