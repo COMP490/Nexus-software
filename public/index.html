@@ -9,15 +9,21 @@
 </head>
 
 <body>
-
-<ul class="nav nav-pills">
-    <li><img src="images/200.jpg" width="70" height="40"></li>
+    
+    <ul class="nav nav-pills">
+    <li><img src="images/200.jpg" width="70" height="40" ></li>
     <li role="presentation"><a href="#/">Home</a></li>
     <li role="presentation"><a href="#/profile">Profile</a></li>
     <li role="presentation"><a href="#/messages">Messages</a></li>
     <li role="presentation"><a href="#/league">League </a></li>
-</ul>
-
+    <li role="presentation"><a href="#/aboutUs">About Us</a></li>
+    </ul>
+        <center>
+        <div 
+         align=”center”><img src="images/NexusFinal.png" width="231" height="214" border="0" >               
+        </div>
+    </center>
+    
 <div class="container" align="center">
 
     <div class="container">
@@ -26,8 +32,10 @@
         </di-->
         <div ng-view>
         </div>
+        
+    </div>         
     </div>
-    </div>
+    
     <script src="scripts/angular.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="app/app.js"></script>
@@ -38,10 +46,14 @@
     <script src="app/controllers/verifyController.js"></script>
     <script src="app/controllers/leagueController.js"></script>
     <script src="app/controllers/messageController.js"></script>
+   
     <script src=”//rawgit.com/jpillora/xdomain/gh-pages/dist/0.6/xdomain.js” master=”*”></script>
     <link rel="stylesheet" href="styles/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    
+    
+    
 </body>
 
 </html>
