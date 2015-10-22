@@ -2,6 +2,19 @@
 <html ng-app="nexusApp">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="styles/stylish-portfolio.css" rel="stylesheet">
     <title>Nexus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -9,14 +22,46 @@
 </head>
 
 <body>
-
-<ul class="nav nav-pills">
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand">
+            <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+        </li>
+        <li>
+            <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick = $("#menu-close").click(); >About</a>
+        </li>
+        <li>
+            <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+        </li>
+        <li>
+            <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+        </li>
+        <li>
+            <a href="#/" onclick = $("#menu-close").click(); >Home</a>
+        </li>
+        <li>
+            <a href="#/profile" onclick = $("#menu-close").click(); >profile</a>
+        </li>
+        <li>
+            <a href="#/messages" onclick = $("#menu-close").click(); >messages</a>
+        </li>
+        <li>
+            <a href="#/league" onclick = $("#menu-close").click(); >League</a>
+        </li>
+    </ul>
+</nav>
+<!--ul class="nav nav-pills">
     <li><img src="images/200.jpg" width="70" height="40"></li>
     <li role="presentation"><a href="#/">Home</a></li>
     <li role="presentation"><a href="#/profile">Profile</a></li>
     <li role="presentation"><a href="#/messages">Messages</a></li>
     <li role="presentation"><a href="#/league">League </a></li>
-</ul>
+</ul-->
 
 <div class="container" align="center">
 
@@ -43,6 +88,43 @@
 <link rel="stylesheet" href="styles/bootstrap.css">
 <link rel="stylesheet" href="styles/ngDialog.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="scripts/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="scripts/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
 
 </body>
 
