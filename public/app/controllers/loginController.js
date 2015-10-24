@@ -1,9 +1,11 @@
 (function () {
 
-        var loginController = function ($scope, $http, $modal ) {
+        var loginController = function ($scope, $http, $modal, $modalInstance ) {
 
             $scope.animationsEnabled = true;
-
+              $scope.cancel = function () {
+            $modalInstance.dismiss();
+        };
             $scope.open = function (size) {
 
                 var modalInstance = $modal.open({
