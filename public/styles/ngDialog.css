@@ -1,4 +1,5 @@
 @-webkit-keyframes ngdialog-fadeout {
+
     0% {
         opacity: 1;
     }
@@ -45,6 +46,7 @@
 .ngdialog *,
 .ngdialog *:before,
 .ngdialog *:after {
+
     box-sizing: inherit;
 }
 
@@ -62,6 +64,7 @@
 .ngdialog.ngdialog-disabled-animation,
 .ngdialog.ngdialog-disabled-animation .ngdialog-overlay,
 .ngdialog.ngdialog-disabled-animation .ngdialog-content {
+
     -webkit-animation: none !important;
     animation: none !important;
 }
@@ -111,4 +114,5 @@
 html.ngdialog-open,
 body.ngdialog-open {
     overflow: hidden;
+
 }

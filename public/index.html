@@ -15,7 +15,6 @@
     <title>Nexus</title>
     <meta charset="utf-8">
     <!--link href="styles/styles.css" rel="stylesheet" type="text/css"-->
-
 </head>
 
 <body class="background">
@@ -61,24 +60,42 @@
 =======
 <body>
 
+<<<<<<< HEAD
 <ul class="nav nav-pills">
 >>>>>>> parent of 264ba7e... single page
     <li><img src="images/200.jpg" width="70" height="40"></li>
+=======
+    <ul class="nav nav-pills">
+    <li><img src="images/200.jpg" width="70" height="40" ></li>
+>>>>>>> refs/remotes/origin/master
     <li role="presentation"><a href="#/">Home</a></li>
     <li role="presentation"><a href="#/profile">Profile</a></li>
     <li role="presentation"><a href="#/messages">Messages</a></li>
     <li role="presentation"><a href="#/league">League </a></li>
+<<<<<<< HEAD
 </ul>
 
 <div class="container">
-
-    <div class="container">
-        <!--di class="jumbotron">
-            <h1 class="text-primary">"Such wow" - gamers</h1>
-        </di-->
-        <div ng-view>
+=======
+    <li role="presentation"><a href="#/aboutUs">About Us</a></li>
+    </ul>
+        <center>
+        <div 
+         align=”center”><img src="images/NexusFinal.png" width="231" height="214" border="0" >               
         </div>
-    </div>
+    </center>
+    
+<div class="container" align="left">
+>>>>>>> refs/remotes/origin/master
+
+        <div class="container">
+            <!--di class="jumbotron">
+            <h1 class="text-primary">"Such wow" - gamers</h1>I'll tr
+        </di-->
+<div ng-view>
+</div>
+</div>
+</div>
 </div>
 <footer>
     <div class="container">
@@ -112,6 +129,12 @@
     </div>
 </footer>
 <script src="scripts/angular.js"></script>
+<script src='scripts/jquery-1.11.3.js'></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+<script src="scripts/ui-bootstrap-tpls-0.14.2.js"></script>
+<script src="scripts/angular-modal-service.js"></script>
+<script src="scripts/angular.js"></script>
 <script src="scripts/angular-route.js"></script>
 <script src="scripts/ngDialog.js"></script>
 <script src="app/app.js"></script>
@@ -122,8 +145,14 @@
 <script src="app/controllers/verifyController.js"></script>
 <script src="app/controllers/leagueController.js"></script>
 <script src="app/controllers/messageController.js"></script>
+<script src="app/controllers/createUserController.js"></script>
+<script src="scripts/ngDialog.js"></script>
+<link rel="stylesheet" href="styles/bootstrap.css">
+<link rel="stylesheet" href="styles/ngDialog.css">
+
 <script src=”//rawgit.com/jpillora/xdomain/gh-pages/dist/0.6/xdomain.js” master=”*”></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/jquery.js"></script>
@@ -154,7 +183,7 @@
                     $('html,body').animate({
                         scrollTop: target.offset().top
                     }, 1000);
-                    return false;   
+                    return false;
                 }
             }
         });

@@ -1,9 +1,8 @@
 <form role="form" ng-hide=loginStatus ng-submit="login(credentials)" novalidate>
     <h2 CLASS="text-primary" class="header" id="headTab">Login</h2>
-
     <div class="form-group">
 
-        <div class="col-xs-4" id="centerStuff">
+        <div class="col-xs-4" >
             <!--label for="username" class="text-primary"> Username:</label><br-->
 
             <input type="text" id="username" name="username" ng-model="credentials.username"
@@ -15,7 +14,9 @@
             <br>
             <button type="submit" class="button">Submit</button>
             <p class="text-danger">{{error}}</p>
-
+            
+                <button type="button" class="btn btn-default" ng-click="open()"> Sign up</button>
+            
         </div>
     </div>
 </form>
@@ -190,3 +191,4 @@
     <p>Successfully logged in</p>
     <button type="submit" class="button" ng-click="logout()">Logoff</button>
 </form>
+

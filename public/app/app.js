@@ -1,15 +1,11 @@
 (function () {
 
 
-    var app = angular.module('nexusApp', ['ngRoute']);
-
+    var app = angular.module('nexusApp', ['ngRoute', 'angularModalService', 'ui.bootstrap']);
 
 
     app.config(function ($routeProvider, $httpProvider) {
-        $httpProvider.defaults.headers.common = {};
-        $httpProvider.defaults.headers.post = {};
-        $httpProvider.defaults.headers.put = {};
-        $httpProvider.defaults.headers.patch = {};
+
         $routeProvider
             .when('/', {
                 controller: 'loginController',
@@ -30,6 +26,10 @@
             .when('/league', {
                 controller: 'leagueController',
                 templateUrl: 'app/views/league.html'
+            })
+            .when('/aboutUs', {
+                controller: 'aboutUsController',
+                templateUrl: 'app/views/aboutUs.html'
             })
             .otherwise({
                 redirectTo: '/'
