@@ -1,11 +1,3 @@
-/*!
- * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-/* Global Styles */
-
 .background{
     background-image: url('http://c2gmusichall.com/wp-content/uploads/2014/08/backgrounds-that-work-well-with-shadygamer-shadygamer.jpg');
     background-repeat: no-repeat;
@@ -45,27 +37,27 @@ body {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #31708f;'rgba(0,0,0,0.4);
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: lightslategrey; 'rgba(0,0,0,0.7);
 }
 
 .btn-light {
     border-radius: 0;
     color: #333;
-    background-color: rgb(255,255,255);
+    background-color: #31708f;;'rgb(255,255,255);
 }
 
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
     color: #333;
-    background-color: rgba(255,255,255,0.8);
+    background-color: lightslategrey;'rgba(255,255,255,0.8);
 }
 
 /* Custom Horizontal Rule */
@@ -111,7 +103,6 @@ hr.small {
     text-decoration: none;
     color: #999;
 }
-
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
@@ -137,7 +128,6 @@ hr.small {
     color: #fff;
     background: none;
 }
-
 #menu-toggle {
     z-index: 1;
     position: fixed;
