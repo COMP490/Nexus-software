@@ -27,6 +27,10 @@
                 controller: 'leagueController',
                 templateUrl: 'app/views/league.html'
             })
+            .when('/aboutUs', {
+                controller: 'aboutUsController',
+                templateUrl: 'app/views/aboutUs.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });
