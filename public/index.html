@@ -2,56 +2,47 @@
 <html ng-app="nexusApp">
 
 <head>
+    <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="styles/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="styles/stylish-portfolio.css" rel="stylesheet">
     <title>Nexus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
+    <!--link href="styles/styles.css" rel="stylesheet" type="text/css"-->
+
 </head>
 
-<body>
+<body class="background">
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-            <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+            <a href="#headTab" onclick=$("#menu-close").click();>Home</a>
         </li>
         <li>
-            <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+            <a href="#about" onclick=$("#menu-close").click();>About</a>
         </li>
         <li>
-            <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            <a href="#services" onclick=$("#menu-close").click();>Services</a>
         </li>
         <li>
-            <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+            <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
         </li>
         <li>
-            <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+            <a href="#/profile" onclick=$("#menu-close").click();>profile</a>
         </li>
         <li>
-            <a href="#/" onclick = $("#menu-close").click(); >Home</a>
+            <a href="#/messages" onclick=$("#menu-close").click();>messages</a>
         </li>
         <li>
-            <a href="#/profile" onclick = $("#menu-close").click(); >profile</a>
-        </li>
-        <li>
-            <a href="#/messages" onclick = $("#menu-close").click(); >messages</a>
-        </li>
-        <li>
-            <a href="#/league" onclick = $("#menu-close").click(); >League</a>
+            <a href="#/league" onclick=$("#menu-close").click();>League</a>
         </li>
     </ul>
 </nav>
@@ -63,7 +54,7 @@
     <li role="presentation"><a href="#/league">League </a></li>
 </ul-->
 
-<div class="container" align="center">
+<div class="container">
 
     <div class="container">
         <!--di class="jumbotron">
@@ -73,6 +64,37 @@
         </div>
     </div>
 </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Nexus</strong>
+                </h4>
+
+                <p><br>Deathstar, CA </p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i></li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Nexus 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="scripts/angular.js"></script>
 <script src="scripts/angular-route.js"></script>
 <script src="scripts/ngDialog.js"></script>
@@ -85,32 +107,29 @@
 <script src="app/controllers/leagueController.js"></script>
 <script src="app/controllers/messageController.js"></script>
 <script src=”//rawgit.com/jpillora/xdomain/gh-pages/dist/0.6/xdomain.js” master=”*”></script>
-<link rel="stylesheet" href="styles/bootstrap.css">
-<link rel="stylesheet" href="styles/ngDialog.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<script src="scripts/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
+<script src="js/jquery.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script>
     // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
+    $("#menu-close").click(function (e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
 
     // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
                 var target = $(this.hash);
