@@ -37,6 +37,7 @@ th {
     top: 50%;
     left: 34%;
     alignment: center;
+    margin-top: 20px;
 }
 
 .imageList{
@@ -47,7 +48,11 @@ vertical-align: middle;
 #league{
     height: auto;
     width: auto;
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 30px;
+    max-height: 30px;
     padding-bottom: 10px;
+}
+.div-padding{
+    20px 10px;
+ 
 }
