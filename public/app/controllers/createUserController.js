@@ -27,12 +27,12 @@
 
         }
         $scope.signUp = function (credentials) {
-            console.log(credentials)
+           
             var userInfo = {
 
                 "username": credentials.username,
-                "password": credentials.password,
-                "password2": credentials.password2
+                "password": sha256_digest(credentials.password),
+                "password2": sha256_digest(credentials.password2)
 
             };
             console.log(userInfo);
@@ -42,7 +42,9 @@
                     console.log($scope.response.result);
                     if ($scope.response.result == true && credentials.password === credentials.password2) {
                         $scope.loginStatus = true;
+                        $modalInstance.dismiss('cancel');
                         $location.path("/");
+                        $scope.close();
                     } else {
                         $scope.loginStatus = false;
                         $scope.error = "The credientials entered were incorrect";

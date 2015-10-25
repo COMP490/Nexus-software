@@ -37,7 +37,7 @@
                     var userInfo = {
 
                         "username": credentials.username,
-                        "password": credentials.password
+                        "password": sha256_digest(credentials.password)
 
                     };
                     console.log(userInfo);
