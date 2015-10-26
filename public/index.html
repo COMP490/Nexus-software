@@ -24,6 +24,7 @@
         <li class="sidebar-brand">
             <a href="#headTab" onclick=$("#menu-close").click();>Nexus</a>
         </li>
+        
         <li>
             <a href="#services" onclick=$("#menu-close").click();>Services</a>
         </li>
@@ -35,7 +36,7 @@
             <a href="#portfolio" onclick=$("#menu-close").click();>Games</a>
         </li>
         <li>
-            <a href="#/profile" onclick=$("#menu-close").click();>profile</a>
+            <a href="#/profile" ng-show= "loginStatus" onclick=$("#menu-close").click();>profile</a>
         </li>
         <li>
             <a href="#/messages" onclick=$("#menu-close").click();>messages</a>
@@ -45,6 +46,11 @@
         </li>
         <li>
             <a href="#/aboutUs" onclick=$("#menu-close").click();>About Us</a>
+        </li>
+          <li>
+          
+        </li>
+          <button type="submit" ng-show= "loginStatus" class="btn btn-dark btn-lg"  ng-click="logout()">Logoff</button>
         </li>
     </ul>
     <br>
