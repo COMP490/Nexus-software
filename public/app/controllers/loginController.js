@@ -1,9 +1,11 @@
 (function () {
 
-        var loginController = function ($scope, $http, $modal ) {
+        var loginController = function ($scope, $http, $modal, $location, $rootScope ) {
 
             $scope.animationsEnabled = true;
-
+              $scope.cancel = function () {
+            $modalInstance.dismiss();
+        };
             $scope.open = function (size) {
 
                 var modalInstance = $modal.open({
@@ -22,11 +24,12 @@
                 
 
             
-
-                $scope.loginStatus = false;
+                if($rootScope.loginStatus === undefined){
+                $rootScope.loginStatus = false;
+                }
 
                 $scope.logout = function (something) {
-                    $scope.loginStatus = false;
+                    $rootScope.loginStatus = false;
                     console.log($scope.loginStatus);
                 };
 
@@ -35,7 +38,7 @@
                     var userInfo = {
 
                         "username": credentials.username,
-                        "password": credentials.password
+                        "password": sha256_digest(credentials.password)
 
                     };
                     console.log(userInfo);
@@ -44,9 +47,10 @@
                         $scope.response = response;
                         console.log($scope.response.result);
                         if ($scope.response.result == true) {
-                            $scope.loginStatus = true;
+                            $rootScope.loginStatus = true;
+                           $location.path("/profile");
                         } else {
-                            $scope.loginStatus = false;
+                            $rootScope.loginStatus = false;
                             $scope.error = "The credientials entered were incorrect";
                         }
                         console.log($scope);
@@ -55,7 +59,7 @@
 
             };
 
-            loginController.$inject = ['$scope', '$http', '$modal'];
+            loginController.$inject = ['$scope', '$http', '$modal', '$location' , '$rootScope'];
 
             angular.module('nexusApp')
                 .controller('loginController', loginController);

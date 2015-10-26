@@ -1,57 +1,64 @@
 (function () {
 
-    var createUserController = function ($scope , $http,  $modalInstance, $location) {
+    var createUserController = function ($scope, $http, $modalInstance, $location) {
         this.showModal = false;
 
-                this.showView = false;
+        this.showView = false;
 
-                this.counter = 1;
+        this.counter = 1;
 
-                toggleDialog = function () {
+        $scope.toggleDialog = function () {
 
-                    this.showModal = !this.showModal;
+            this.showModal = !this.showModal;
 
-                }
+        }
+        $scope.close = function () {
+            $modalInstance.dismiss('cancel');
+        };
+        this.toggleView = function () {
 
-                this.toggleView = function () {
+            this.showView = !this.showView;
 
-                    this.showView = !this.showView;
+        }
 
-                }
+        this.changeDisplay = function () {
 
-                this.changeDisplay = function () {
+            this.counter++;
 
-                    this.counter++;
+        }
+        $scope.signUp = function (credentials) {
+           
+            var userInfo = {
 
-                }
-                         $scope.signUp = function (credentials) {
-                    console.log(credentials)
-                    var userInfo = {
+                "username": credentials.username,
+                "password": sha256_digest(credentials.password),
+                "password2": sha256_digest(credentials.password2)
 
-                        "username": credentials.username,
-                        "password": credentials.password,
-                        "password2": credentials.password2
+            };
+            console.log(userInfo);
+            if (credentials.password === credentials.password2) {
+                $http.post('http://comp490.duckdns.org/create', userInfo).success(function (response) {
+                    $scope.response = response;
+                    console.log($scope.response.result);
+                    if ($scope.response.result == true && credentials.password === credentials.password2) {
+                        $scope.loginStatus = true;
+                        $modalInstance.dismiss('cancel');
+                        $location.path("/");
+                        $scope.close();
+                    } else {
+                        $scope.loginStatus = false;
+                        $scope.error = "The credientials entered were incorrect";
+                    }
+                    console.log($scope);
 
-                    };
-                    console.log(userInfo);
 
-                    $http.post('http://comp490.duckdns.org/create', userInfo).success(function (response) {
-                        $scope.response = response;
-                        console.log($scope.response.result);
-                        if ($scope.response.result == true && credentials.password===credentials.password2) {
-                            $scope.loginStatus = true;
-                            $location.path("/");
-                        } else {
-                            $scope.loginStatus = false;
-                            $scope.error = "The credientials entered were incorrect";
-                        }
-                        console.log($scope);
-                      
-                   
-                    })
-                };
-
+                })
+            } else {
+                $scope.error = "Passwords do not match"
             }
+        };
+
+    }
 
     createUserController.$inject = ['$scope', '$http', '$modalInstance', '$location'];
 

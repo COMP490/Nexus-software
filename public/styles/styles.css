@@ -242,15 +242,12 @@ footer {
 }
 
 .button {
-    font: bold 20px Arial;
-    text-decoration: none;
-    background-color: #337ab7;
-    color: #FFFFFF;
-    padding: 2px 6px 2px 6px;
-    border-top: 3px solid #CCCCCC;
-    border-right: 3px solid #333333;
-    border-bottom: 3px solid #333333;
-    border-left: 3px solid #CCCCCC;
+  border-style: solid;
+    color:black;
+  border-width : 1px 1px 1px 1px;
+  text-decoration : none;
+  padding : 4px;
+  border-color : #000000
 
 }
 /* profile css */
